@@ -14,4 +14,4 @@ A platform that connects blood donors with recipients, making life-saving connec
 - **Database:** MySQL
 
 ## NOTE
--**Use the above commands to run the project on localhost.**
+- **Use the above commands to run the project on localhost.**
