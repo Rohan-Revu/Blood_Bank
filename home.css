@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-bar {
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.tit {
+    position: relative;
+    left: 100px;
+}
+
+.tit p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.cont {
+    margin-right: 100px;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    height: 100%; /* Ensure parent container height is considered */
+}
+
+.cont a, i {
+    margin-left: 40px;
+    text-decoration: none;
+    color: #000;
+}
+
+.cont i {
+    font-size: 40px;
+}
+
+.cont a:hover {
+    color: #007BFF;
+}
+
+
+/* Profile Icon Hover Effect */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-icon {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.profile-details {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 250px;
+    top: 50px;
+    left: -80px;
+    z-index: 10;
+    border-radius: 8px;
+}
+
+.profile-container:hover .profile-details {
+    display: block;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.content {
+    margin-left: 100px;
+    margin-top: 150px;
+    width: 600px;
+    height: 300px;
+}
+
+.typing-container {
+    font-size: 60px;
+    font-weight: bold;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Initially hidden */
+    animation: typing 3s steps(24) forwards, blink 0.3s step-end 2s;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10ch; /* Matches the length of the text */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.slo {
+    font-size: 20px;
+}
+
+.def {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button {
+    width: 200px;
+    height: 35px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    background-color: #444;
+}
+
+img {
+    height: 450px;
+    width: 450px;
+    position: relative;
+    left: 200px;
+    top: 70px;
+}
+
+.main {
+    display: flex;
+}
+.toast {
+    position: fixed;
+    top: 70px;
+    right: 200px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+.toast.show {
+    display: block;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+.toast.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.toast.success {
+    background-color: #2ECC71;
+    color: white;
+}

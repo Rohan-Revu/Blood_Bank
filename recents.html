@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Eligibility Checker</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+    }
+    input{
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 10px;
+        border-bottom: 2px solid #000;
+        transition: .5s;
+        
+    }
+    button{
+        margin-left: 160px;
+        width: 250px;
+        height: 35px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        transition: .3s;
+        margin-top: 20px;   
+    }
+    .box {
+        position: relative;
+        width: 600px;
+        height: 250px;
+        padding: 20px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+    h2{
+        text-decoration: underline;
+    }
+    p{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Check your eligibility to donate</h2>
+        <label for="donationDate">Enter the Date of Your Last Donation:</label>
+        <input type="date" id="donationDate" required>
+        <button onclick="checkEligibility()">Check Eligibility</button>
+        
+        <button class="btn" onclick="window.location.href='home.php'">Go back to home</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function checkEligibility() {
+            let donationDate = new Date(document.getElementById('donationDate').value);
+            if (isNaN(donationDate)) {
+                document.getElementById('result').innerText = "Please select a valid date.";
+                return;
+            }
+            let currentDate = new Date();
+            let timeDiff = currentDate - donationDate;
+            let daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            
+            if (daysDiff >= 56) {
+                document.getElementById('result').innerText = "You are eligible to donate blood.";
+                document.getElementById('result').style.color = "green";
+            } else {
+                let daysLeft = 56 - daysDiff;
+                document.getElementById('result').innerText = `You need to wait ${daysLeft} more days to donate blood.`;
+                document.getElementById('result').style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
