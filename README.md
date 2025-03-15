@@ -12,3 +12,6 @@ A platform that connects blood donors with recipients, making life-saving connec
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** PHP
 - **Database:** MySQL
+
+## NOTE
+-**Use the above commands to run the project on localhost.**
