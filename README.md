@@ -1,2 +1,14 @@
-# Blood_Bank
-A platform that bridges the gap between blood donors and recipients, making life-saving connections easier and faster.
+# Blood Donation Platform
+
+🚑 A platform that connects blood donors with recipients, making life-saving connections easier and faster. 🩸
+
+## 🌟 Features
+- **Donor Registration** – Sign up and provide details about your blood type and availability.
+- **Recipient Requests** – Find matching donors quickly and easily.
+- **Location-Based Matching** – Connect with nearby donors for faster response.
+- **Secure and Reliable** – Ensuring safe and seamless communication between donors and recipients.
+
+## 🛠️ Technologies Used
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** PHP
+- **Database:** MySQL
