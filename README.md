@@ -1,6 +1,6 @@
 # Blood Donation Platform
 
-🚑 A platform that connects blood donors with recipients, making life-saving connections easier and faster. 🩸
+A platform that connects blood donors with recipients, making life-saving connections easier and faster.
 
 ## 🌟 Features
 - **Donor Registration** – Sign up and provide details about your blood type and availability.
